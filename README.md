@@ -5,6 +5,11 @@
 <hr size="1">
 ### R Ladies Taipei
 <ul class="task-list">
+   <li> 2017-03-12 [RLadies Kaggle暖身workshop]
+        <ul class="task-list">
+            <li> <a href="https://github.com/kristenchan/Sharing/blob/master/Find%20the%20Best%20Fit%20for%20your%20Model.pdf" target="_blank"> Find the Best Fit for your Model- ppt </a> </li>
+        </ul>
+   </li>
    <li> 2017-02-06 [Shiny on Azure]
         <ul class="task-list">
             <li> <a href="https://github.com/kristenchan/RLadies/blob/master/ShinyOnAzure.pdf" target="_blank">Shiny on Azure - ppt </a> </li>
