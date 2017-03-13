@@ -20,5 +20,8 @@
             </li>
         </ul> 
    </li>
-   <li> 2016-12-05 [PowerBI with R]
+   <li> 2016-12-05 [Power BI with R]
+   <ul class="task-list">
+            <li> <a href="https://github.com/kristenchan/Sharing/blob/master/PowerBIwithR.pdf" target="_blank"> Power BI with R - ppt </a> </li>
+        </ul>
 </ul>
