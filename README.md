@@ -1,8 +1,8 @@
 <p>
-    分享紀錄
+<h2> 分享紀錄 </h2>
 </p>   
 <hr size="1">
-<h2> R Ladies Taipei </h2>
+<h3> R Ladies Taipei </h3>
 <ul class="task-list">
    <li> 2017-03-12 [RLadies Kaggle暖身workshop]
         <ul class="task-list">
