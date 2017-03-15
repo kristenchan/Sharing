@@ -1,5 +1,5 @@
 <p>
-<h2> 分享紀錄 </h2>
+<h2> My Sharing List </h2>
 </p>   
 <hr size="1">
 <h3> R Ladies Taipei </h3>
