@@ -2,7 +2,7 @@
 <h2> My Sharing List </h2>
 </p>   
 <hr size="1">
-<h3> R Ladies Taipei </h3>
+<h3> R </h3>
 <ul class="task-list">
    <li> 2017-07-10 [Taiwan R / MLDM Monday -- Shiny on Azure partII]
         <ul class="task-list">
