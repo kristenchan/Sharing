@@ -4,7 +4,7 @@
 <hr size="1">
 <h3> R Ladies Taipei </h3>
 <ul class="task-list">
-   <li> 2017-07-10 [Taiwan R / MLDM Monday -- Shiny on Azure]
+   <li> 2017-07-10 [Taiwan R / MLDM Monday -- Shiny on Azure partII]
         <ul class="task-list">
             <li> <a href="https://github.com/kristenchan/Sharing/blob/master/ShinyOnAzure_part2.pdf" target="_blank"> Shiny on Azure - ppt </a> </li>
         </ul>
