@@ -35,6 +35,7 @@
             <li> <a href="https://github.com/kristenchan/Sharing/blob/master/PowerBIwithR.pdf" target="_blank"> Power BI with R - slide </a> 
             </li>
         </ul>
+   </li>        
 </ul>
 <br>
 <h3> Tutorial </h3>
