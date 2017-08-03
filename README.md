@@ -3,7 +3,7 @@
 </p>   
 <hr size="1">
 <h3> R </h3>
-<ul class="task-list">
+<ul>
    <li> 2017-07-10 [Taiwan R / MLDM Monday -- Shiny on Azure partII]
         <ul class="task-list">
             <li> <a href="https://github.com/kristenchan/Sharing/blob/master/ShinyOnAzure_part2.pdf" target="_blank"> Shiny on Azure - slide </a> 
@@ -38,8 +38,8 @@
 </ul>
 <br>
 <h3> Tutorial </h3>
-<ul class="task-list">
-   <li> 2017--10 [Jupyther Slideshow Tutorial]
+<ul>
+   <li> 2017-08-03 [Jupyther Slideshow Tutorial]
         <ul class="task-list">
             <li> <a href="https://kristenchan.github.io/Sharing/Slideshow_Tutorial.slides.html" target="_blank"> Jupyther Slideshow - slide </a> </li>
         </ul>
