@@ -9,7 +9,7 @@
 <meta name="apple-mobile-web-app-capable" content="yes" />
 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
 
-<title>py_dataanalysis_ch1 slides</title>
+<title>py_dataanalysis_ch2 slides</title>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
@@ -11871,12 +11871,11 @@ a.anchor-link {
 <div class="text_cell_render border-box-sizing rendered_html">
 <h1 id="Agenda">Agenda<a class="anchor-link" href="#Agenda">&#182;</a></h1><hr>
 <ul>
-<li>變數命名規則 (Variable Name Rules)</li>
-<li>變數賦值 (Assignment Statements)</li>
-<li>交換變數 (Swap variables)</li>
-<li>資料型態 (Data Type)</li>
-<li>運算子 (Operator)</li>
-<li>資料型態轉換 (Data Type Conversion)</li>
+<li>Numpy<ol>
+<li>建立 ndarray</li>
+<li>計算 平均數、標準差</li>
+</ol>
+</li>
 </ul>
 
 </div>
@@ -11887,16 +11886,15 @@ a.anchor-link {
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Variable-Name-Rules">Variable Name Rules<a class="anchor-link" href="#Variable-Name-Rules">&#182;</a></h1><hr>
+<h1 id="Numpy">Numpy<a class="anchor-link" href="#Numpy">&#182;</a></h1><hr>
 <ul>
-<li><h3>First character</h3>
-A letter (<font color='blue'>a - z, A - B</font>) or underscore ( <font color='blue'>_</font> )</li>
-<li><h3>Other characters</h3>
-Letters (<font color='blue'>a - z, A - B</font>) , numbers (<font color='blue'>0-9</font>) or ( <font color='blue'>_</font> )</li>
-<li><h3>No</h3>
-<font color='blue'>: !, @, #, $, %, - </font> etc. </li>
-<li><h3>Reserved words 保留字</h3></li>
+<li>### <font color='blue'>import numpy</font> as np
+引入 numpy 套件</li>
+<li><h3>numpy.array( x )</h3>
+建立 numpy.array</li>
 </ul>
+<blockquote><p>元素 x 形式：[ 1,2,3 ]</p>
+</blockquote>
 
 </div>
 </div>
@@ -11906,26 +11904,8 @@ Letters (<font color='blue'>a - z, A - B</font>) , numbers (<font color='blue'>0
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Variable-Name-Rules">Variable Name Rules<a class="anchor-link" href="#Variable-Name-Rules">&#182;</a></h1><hr>
-<h2 id="Reserved-words">Reserved words<a class="anchor-link" href="#Reserved-words">&#182;</a></h2><table>
-<tr><td>False</td><td>class</td><td>finally</td><td>is</td><td>return</td></tr>
-<tr><td>None</td><td>continue</td><td>for</td><td>lambda</td><td>try</td></tr>
-<tr><td>True</td><td>def</td><td>from</td><td>nonlocal</td><td>while</td></tr>
-<tr><td>and</td><td>del</td><td>global</td><td>not</td><td>with</td></tr>
-<tr><td>as</td><td>elif</td><td>if</td><td>or</td><td>yield</td></tr>
-<tr><td>assert</td><td>else</td><td>import</td><td>pass</td><td></td></tr>
-<tr><td>break</td><td>except</td><td>in</td><td>raise</td><td></td></tr>
-</table>
-</div>
-</div>
-</div></section><section>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Variable-Name-Rules">Variable Name Rules<a class="anchor-link" href="#Variable-Name-Rules">&#182;</a></h1><hr>
-<h3 id="Good"><font color="blue">Good</font><a class="anchor-link" href="#Good">&#182;</a></h3>
+<h1 id="Numpy">Numpy<a class="anchor-link" href="#Numpy">&#182;</a></h1><hr>
+<h2 id="numpy.array(-x-)">numpy.array( x )<a class="anchor-link" href="#numpy.array(-x-)">&#182;</a></h2>
 </div>
 </div>
 </div>
@@ -11934,7 +11914,7 @@ Letters (<font color='blue'>a - z, A - B</font>) , numbers (<font color='blue'>0
 <div class="prompt input_prompt">In&nbsp;[1]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">_variable</span> <span class="o">=</span> <span class="mi">1</span> 
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span>
 </pre></div>
 
 </div>
@@ -11947,42 +11927,7 @@ Letters (<font color='blue'>a - z, A - B</font>) , numbers (<font color='blue'>0
 <div class="prompt input_prompt">In&nbsp;[2]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">variable</span> <span class="o">=</span> <span class="mi">1</span> 
-</pre></div>
-
-</div>
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[3]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">first_variable</span> <span class="o">=</span> <span class="mi">1</span>
-</pre></div>
-
-</div>
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Bad"><font color="red">Bad</font><a class="anchor-link" href="#Bad">&#182;</a></h3>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[4]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="err">$</span><span class="n">variable</span> <span class="o">=</span> <span class="mi">1</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">numpy</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">])</span>
 </pre></div>
 
 </div>
@@ -11994,16 +11939,14 @@ Letters (<font color='blue'>a - z, A - B</font>) , numbers (<font color='blue'>0
 
 
 <div class="output_area">
-<div class="prompt"></div>
+<div class="prompt output_prompt">Out[2]:</div>
 
-<div class="output_subarea output_text output_error">
-<pre>
-<span class="ansi-cyan-fg">  File </span><span class="ansi-green-fg">&#34;&lt;ipython-input-4-1ea8277c23c2&gt;&#34;</span><span class="ansi-cyan-fg">, line </span><span class="ansi-green-fg">1</span>
-<span class="ansi-red-fg">    $variable = 1</span>
-    ^
-<span class="ansi-red-fg">SyntaxError</span><span class="ansi-red-fg">:</span> invalid syntax
-</pre>
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>array([1, 2, 3])</pre>
 </div>
+
 </div>
 
 </div>
@@ -12015,7 +11958,39 @@ Letters (<font color='blue'>a - z, A - B</font>) , numbers (<font color='blue'>0
 <div class="prompt input_prompt">In&nbsp;[5]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="mi">1</span><span class="n">variable</span> <span class="o">=</span> <span class="mi">1</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">type</span><span class="p">(</span><span class="n">numpy</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">]))</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+<div class="prompt output_prompt">Out[5]:</div>
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>numpy.ndarray</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[4]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">weather_array</span> <span class="o">=</span> <span class="n">numpy</span><span class="o">.</span><span class="n">array</span><span class="p">([</span> <span class="s1">&#39;Taipei&#39;</span> <span class="p">,</span> <span class="mf">18.5</span> <span class="p">,</span> <span class="s1">&#39;rainy&#39;</span> <span class="p">])</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">weather_array</span><span class="p">)</span>
 </pre></div>
 
 </div>
@@ -12029,12 +12004,8 @@ Letters (<font color='blue'>a - z, A - B</font>) , numbers (<font color='blue'>0
 <div class="output_area">
 <div class="prompt"></div>
 
-<div class="output_subarea output_text output_error">
-<pre>
-<span class="ansi-cyan-fg">  File </span><span class="ansi-green-fg">&#34;&lt;ipython-input-5-ae24453ae98c&gt;&#34;</span><span class="ansi-cyan-fg">, line </span><span class="ansi-green-fg">1</span>
-<span class="ansi-red-fg">    1variable = 1</span>
-            ^
-<span class="ansi-red-fg">SyntaxError</span><span class="ansi-red-fg">:</span> invalid syntax
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>[&#39;Taipei&#39; &#39;18.5&#39; &#39;rainy&#39;]
 </pre>
 </div>
 </div>
@@ -12042,14 +12013,25 @@ Letters (<font color='blue'>a - z, A - B</font>) , numbers (<font color='blue'>0
 </div>
 </div>
 
-</div></section></section><section><section>
+</div>
 <div class="cell border-box-sizing text_cell rendered">
 <div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Assignment-Statements">Assignment Statements<a class="anchor-link" href="#Assignment-Statements">&#182;</a></h1><hr>
-<h3 id="Single-assignment">Single assignment<a class="anchor-link" href="#Single-assignment">&#182;</a></h3>
+<blockquote><p>ndarray 只接受同一種資料型態</p>
+</blockquote>
+
+</div>
+</div>
+</div></section><section>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Numpy">Numpy<a class="anchor-link" href="#Numpy">&#182;</a></h1><hr>
+<h2 id="&#20197;-np-&#20358;&#20195;&#34920;-numpy">&#20197; <font color="blue">np</font> &#20358;&#20195;&#34920; numpy<a class="anchor-link" href="#&#20197;-np-&#20358;&#20195;&#34920;-numpy">&#182;</a></h2>
 </div>
 </div>
 </div>
@@ -12058,7 +12040,7 @@ Letters (<font color='blue'>a - z, A - B</font>) , numbers (<font color='blue'>0
 <div class="prompt input_prompt">In&nbsp;[6]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">myname</span> <span class="o">=</span> <span class="s1">&#39;Kristen&#39;</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
 </pre></div>
 
 </div>
@@ -12071,61 +12053,21 @@ Letters (<font color='blue'>a - z, A - B</font>) , numbers (<font color='blue'>0
 <div class="prompt input_prompt">In&nbsp;[7]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s1">&#39;My Name : &#39;</span><span class="p">,</span><span class="n">myname</span><span class="p">)</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">Temperature_Taipei</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">24</span><span class="p">,</span><span class="mi">23</span><span class="p">,</span><span class="mi">24</span><span class="p">,</span><span class="mi">19</span><span class="p">,</span><span class="mi">20</span><span class="p">,</span><span class="mi">22</span><span class="p">,</span><span class="mi">22</span><span class="p">])</span>
 </pre></div>
 
 </div>
 </div>
 </div>
 
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-<div class="prompt"></div>
-
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>My Name :  Kristen
-</pre>
-</div>
-</div>
-
-</div>
-</div>
-
-</div></section><section>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Assignment-Statements">Assignment Statements<a class="anchor-link" href="#Assignment-Statements">&#182;</a></h1><hr>
-<h3 id="Multiple-Assignment">Multiple Assignment<a class="anchor-link" href="#Multiple-Assignment">&#182;</a></h3>
-</div>
-</div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">In&nbsp;[8]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">yourname</span> <span class="o">=</span> <span class="n">hisname</span> <span class="o">=</span> <span class="n">hername</span> <span class="o">=</span> <span class="s1">&#39;Kristen&#39;</span> <span class="c1">#Multiple Assignment</span>
-</pre></div>
-
-</div>
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[9]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Your Name : &#39;</span><span class="p">,</span><span class="n">yourname</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;His Name : &#39;</span><span class="p">,</span><span class="n">hisname</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Her Name : &#39;</span><span class="p">,</span><span class="n">hername</span><span class="p">)</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">Temperature_Taipei</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="nb">type</span><span class="p">(</span><span class="n">Temperature_Taipei</span><span class="p">))</span>
 </pre></div>
 
 </div>
@@ -12140,55 +12082,8 @@ Letters (<font color='blue'>a - z, A - B</font>) , numbers (<font color='blue'>0
 <div class="prompt"></div>
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>Your Name :  Kristen
-His Name :  Kristen
-Her Name :  Kristen
-</pre>
-</div>
-</div>
-
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[10]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">my_age</span><span class="p">,</span> <span class="n">my_gender</span><span class="p">,</span> <span class="n">my_city</span> <span class="o">=</span> <span class="mi">80</span><span class="p">,</span> <span class="s2">&quot;Female&quot;</span><span class="p">,</span> <span class="s2">&quot;Taipei&quot;</span> <span class="c1">#Multiple Assignment</span>
-</pre></div>
-
-</div>
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[11]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Age : &#39;</span><span class="p">,</span><span class="n">my_age</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Gender : &#39;</span><span class="p">,</span><span class="n">my_gender</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;City : &#39;</span><span class="p">,</span><span class="n">my_city</span><span class="p">)</span>
-</pre></div>
-
-</div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-<div class="prompt"></div>
-
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>Age :  80
-Gender :  Female
-City :  Taipei
+<pre>[24 23 24 19 20 22 22]
+&lt;class &#39;numpy.ndarray&#39;&gt;
 </pre>
 </div>
 </div>
@@ -12202,8 +12097,158 @@ City :  Taipei
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Swap-variables">Swap variables<a class="anchor-link" href="#Swap-variables">&#182;</a></h1><hr>
+<h1 id="Numpy">Numpy<a class="anchor-link" href="#Numpy">&#182;</a></h1><hr>
+<ul>
+<li>### 平均數<ul>
+  <li><font color='blue'>.mean()</font></li>
+  <li><font color='blue'>np.mean( x )</font></li>
+</ul></li>
+<li>### 標準差<ul>
+  <li><font color='blue'>np.std( x )</font></li>
+</ul></li>
+</ul>
 
+</div>
+</div>
+</div></section><section>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Numpy">Numpy<a class="anchor-link" href="#Numpy">&#182;</a></h1><hr>
+<h2 id="&#24179;&#22343;&#25976;">&#24179;&#22343;&#25976;<a class="anchor-link" href="#&#24179;&#22343;&#25976;">&#182;</a></h2>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[9]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">Temperature_Taipei</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+<div class="prompt output_prompt">Out[9]:</div>
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>22.0</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[10]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">np</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">Temperature_Taipei</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+<div class="prompt output_prompt">Out[10]:</div>
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>22.0</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="&#27161;&#28310;&#24046;">&#27161;&#28310;&#24046;<a class="anchor-link" href="#&#27161;&#28310;&#24046;">&#182;</a></h2>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[11]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">np</span><span class="o">.</span><span class="n">std</span><span class="p">(</span><span class="n">Temperature_Taipei</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+<div class="prompt output_prompt">Out[11]:</div>
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>1.7728105208558367</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div></section></section><section><section>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Exercise"><div class="alert alert-block alert-danger">Exercise</div><a class="anchor-link" href="#Exercise">&#182;</a></h1>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Q.-&#21033;&#29992;-numpy-&#22871;&#20214;&#65292;&#35336;&#31639;-Keelung-&#26410;&#20358;&#19968;&#36913;&#30340;&#24179;&#22343;&#28331;&#24230;">Q. &#21033;&#29992; numpy &#22871;&#20214;&#65292;&#35336;&#31639; Keelung &#26410;&#20358;&#19968;&#36913;&#30340;&#24179;&#22343;&#28331;&#24230;<a class="anchor-link" href="#Q.-&#21033;&#29992;-numpy-&#22871;&#20214;&#65292;&#35336;&#31639;-Keelung-&#26410;&#20358;&#19968;&#36913;&#30340;&#24179;&#22343;&#28331;&#24230;">&#182;</a></h2><blockquote><p>Keelung ： 22, 20, 21, 18, 18, 19, 21</p>
+</blockquote>
+
+</div>
+</div>
+</div></section><section>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Answers"><div class="alert alert-block alert-success">Answers</div><a class="anchor-link" href="#Answers">&#182;</a></h1>
 </div>
 </div>
 </div>
@@ -12212,7 +12257,7 @@ City :  Taipei
 <div class="prompt input_prompt">In&nbsp;[12]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">student1_name</span> <span class="o">=</span> <span class="s1">&#39;Vincent&#39;</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">Keelung</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">22</span><span class="p">,</span><span class="mi">20</span><span class="p">,</span><span class="mi">21</span><span class="p">,</span><span class="mi">18</span><span class="p">,</span><span class="mi">18</span><span class="p">,</span><span class="mi">19</span><span class="p">,</span><span class="mi">21</span><span class="p">])</span>
 </pre></div>
 
 </div>
@@ -12225,21 +12270,7 @@ City :  Taipei
 <div class="prompt input_prompt">In&nbsp;[13]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">student2_name</span> <span class="o">=</span> <span class="s1">&#39;Benson&#39;</span>
-</pre></div>
-
-</div>
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[14]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Student 1 : &#39;</span><span class="p">,</span><span class="n">student1_name</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Student 2 : &#39;</span><span class="p">,</span><span class="n">student2_name</span><span class="p">)</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Keelung 未來一週的平均溫度 : &#39;</span><span class="p">,</span><span class="n">Keelung</span><span class="o">.</span><span class="n">mean</span><span class="p">())</span>
 </pre></div>
 
 </div>
@@ -12254,2934 +12285,9 @@ City :  Taipei
 <div class="prompt"></div>
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>Student 1 :  Vincent
-Student 2 :  Benson
+<pre>Keelung 未來一週的平均溫度 :  19.8571428571
 </pre>
 </div>
-</div>
-
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Swap">Swap<a class="anchor-link" href="#Swap">&#182;</a></h3>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[15]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">student1_name</span> <span class="p">,</span> <span class="n">student2_name</span> <span class="o">=</span> <span class="n">student2_name</span> <span class="p">,</span> <span class="n">student1_name</span>
-</pre></div>
-
-</div>
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[16]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Student 1 : &#39;</span><span class="p">,</span><span class="n">student1_name</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Student 2 : &#39;</span><span class="p">,</span><span class="n">student2_name</span><span class="p">)</span>
-</pre></div>
-
-</div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-<div class="prompt"></div>
-
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>Student 1 :  Benson
-Student 2 :  Vincent
-</pre>
-</div>
-</div>
-
-</div>
-</div>
-
-</div></section></section><section><section>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Data-Type">Data Type<a class="anchor-link" href="#Data-Type">&#182;</a></h1><hr>
-<ul>
-<li>數值型態（Numeric type） </li>
-<li>字串型態（String type）</li>
-</ul>
-
-</div>
-</div>
-</div></section><section>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Data-Type">Data Type<a class="anchor-link" href="#Data-Type">&#182;</a></h1><hr>
-<table>
-<tr><td><b>Tpye</b></td><td><b>Example</b></td></tr>
-<tr><td>int</td><td>10</td></tr>
-<tr><td>float</td><td>3.14</td></tr>
-<tr><td>boolean</td><td>True , False</td></tr>
-<tr><td>string</td><td>'Apple'</td></tr>
-</table>
-</div>
-</div>
-</div></section><section>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Data-Type">Data Type<a class="anchor-link" href="#Data-Type">&#182;</a></h1><hr>
-<h3 id="type(-x-)-:-&#20351;&#29992;-type-&#20358;&#24471;&#30693;-x-&#30340;&#22411;&#24907;">type( <font color="blue">x</font> ) : &#20351;&#29992; type &#20358;&#24471;&#30693; <font color="blue">x</font> &#30340;&#22411;&#24907;<a class="anchor-link" href="#type(-x-)-:-&#20351;&#29992;-type-&#20358;&#24471;&#30693;-x-&#30340;&#22411;&#24907;">&#182;</a></h3>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[17]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">type</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span>
-</pre></div>
-
-</div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-<div class="prompt output_prompt">Out[17]:</div>
-
-
-
-<div class="output_text output_subarea output_execute_result">
-<pre>int</pre>
-</div>
-
-</div>
-
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[18]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">type</span><span class="p">(</span><span class="mf">3.14</span><span class="p">)</span>
-</pre></div>
-
-</div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-<div class="prompt output_prompt">Out[18]:</div>
-
-
-
-<div class="output_text output_subarea output_execute_result">
-<pre>float</pre>
-</div>
-
-</div>
-
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[19]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">type</span><span class="p">(</span><span class="kc">True</span><span class="p">)</span>
-</pre></div>
-
-</div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-<div class="prompt output_prompt">Out[19]:</div>
-
-
-
-<div class="output_text output_subarea output_execute_result">
-<pre>bool</pre>
-</div>
-
-</div>
-
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[20]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">type</span><span class="p">(</span><span class="mi">1</span><span class="o">&gt;</span><span class="mi">3</span><span class="p">)</span>
-</pre></div>
-
-</div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-<div class="prompt output_prompt">Out[20]:</div>
-
-
-
-<div class="output_text output_subarea output_execute_result">
-<pre>bool</pre>
-</div>
-
-</div>
-
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[21]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">type</span><span class="p">(</span><span class="s1">&#39;10&#39;</span><span class="p">)</span>
-</pre></div>
-
-</div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-<div class="prompt output_prompt">Out[21]:</div>
-
-
-
-<div class="output_text output_subarea output_execute_result">
-<pre>str</pre>
-</div>
-
-</div>
-
-</div>
-</div>
-
-</div></section><section>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Data-Type">Data Type<a class="anchor-link" href="#Data-Type">&#182;</a></h1><hr>
-<h3 id="!&#27880;&#24847;"><font color="red">!&#27880;&#24847;</font><a class="anchor-link" href="#!&#27880;&#24847;">&#182;</a></h3>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[22]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">type</span><span class="p">(</span><span class="kc">True</span><span class="p">)</span>
-</pre></div>
-
-</div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-<div class="prompt output_prompt">Out[22]:</div>
-
-
-
-<div class="output_text output_subarea output_execute_result">
-<pre>bool</pre>
-</div>
-
-</div>
-
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[23]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">type</span><span class="p">(</span><span class="n">true</span><span class="p">)</span>
-</pre></div>
-
-</div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-<div class="prompt"></div>
-
-<div class="output_subarea output_text output_error">
-<pre>
-<span class="ansi-red-fg">---------------------------------------------------------------------------</span>
-<span class="ansi-red-fg">NameError</span>                                 Traceback (most recent call last)
-<span class="ansi-green-fg">&lt;ipython-input-23-83ab3fb73e0b&gt;</span> in <span class="ansi-cyan-fg">&lt;module&gt;</span><span class="ansi-blue-fg">()</span>
-<span class="ansi-green-fg">----&gt; 1</span><span class="ansi-red-fg"> </span>type<span class="ansi-blue-fg">(</span>true<span class="ansi-blue-fg">)</span>
-
-<span class="ansi-red-fg">NameError</span>: name &#39;true&#39; is not defined</pre>
-</div>
-</div>
-
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[24]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">type</span><span class="p">(</span><span class="kc">False</span><span class="p">)</span>
-</pre></div>
-
-</div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-<div class="prompt output_prompt">Out[24]:</div>
-
-
-
-<div class="output_text output_subarea output_execute_result">
-<pre>bool</pre>
-</div>
-
-</div>
-
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[25]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">type</span><span class="p">(</span><span class="n">false</span><span class="p">)</span>
-</pre></div>
-
-</div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-<div class="prompt"></div>
-
-<div class="output_subarea output_text output_error">
-<pre>
-<span class="ansi-red-fg">---------------------------------------------------------------------------</span>
-<span class="ansi-red-fg">NameError</span>                                 Traceback (most recent call last)
-<span class="ansi-green-fg">&lt;ipython-input-25-a2d9c628763d&gt;</span> in <span class="ansi-cyan-fg">&lt;module&gt;</span><span class="ansi-blue-fg">()</span>
-<span class="ansi-green-fg">----&gt; 1</span><span class="ansi-red-fg"> </span>type<span class="ansi-blue-fg">(</span>false<span class="ansi-blue-fg">)</span>
-
-<span class="ansi-red-fg">NameError</span>: name &#39;false&#39; is not defined</pre>
-</div>
-</div>
-
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<blockquote><p>Boolean : True / False 的T和Ｆ要大寫</p>
-</blockquote>
-
-</div>
-</div>
-</div></section></section><section><section>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Operator">Operator<a class="anchor-link" href="#Operator">&#182;</a></h1><hr>
-<ul>
-<li>算術運算子 (Arithmetic Operator)</li>
-<li>關係運算子 (Comparison Operator)</li>
-<li>指派運算子 (Assignment Operator)</li>
-<li>邏輯運算子 (Logical Operator)</li>
-</ul>
-
-</div>
-</div>
-</div></section><section>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Operator">Operator<a class="anchor-link" href="#Operator">&#182;</a></h1><hr>
-<h2 id="Arithmetic-Operator">Arithmetic Operator<a class="anchor-link" href="#Arithmetic-Operator">&#182;</a></h2><table>
-<tr><td><b>運算子</b></td><td><b>功能</b></td></tr>
-<tr><td>＋</td><td>加法運算</td></tr>
-<tr><td>−</td><td>減法運算/負號</td></tr>
-<tr><td>*</td><td>乘法運算</td></tr>
-<tr><td>**</td><td>指數運算</td></tr>
-<tr><td>/</td><td>除法運算</td></tr>
-<tr><td>//</td><td>整除</td></tr>
-<tr><td>%</td><td>取餘數</td></tr>
-</table>
-</div>
-</div>
-</div></section><section>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Operator">Operator<a class="anchor-link" href="#Operator">&#182;</a></h1><hr>
-<h2 id="Arithmetic-Operator">Arithmetic Operator<a class="anchor-link" href="#Arithmetic-Operator">&#182;</a></h2>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[26]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="mi">1</span> <span class="o">+</span> <span class="mi">2</span>
-</pre></div>
-
-</div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-<div class="prompt output_prompt">Out[26]:</div>
-
-
-
-<div class="output_text output_subarea output_execute_result">
-<pre>3</pre>
-</div>
-
-</div>
-
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[27]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="mi">5</span> <span class="o">-</span> <span class="mi">10</span>
-</pre></div>
-
-</div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-<div class="prompt output_prompt">Out[27]:</div>
-
-
-
-<div class="output_text output_subarea output_execute_result">
-<pre>-5</pre>
-</div>
-
-</div>
-
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[28]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="mi">4</span> <span class="o">*</span> <span class="mi">6</span>
-</pre></div>
-
-</div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-<div class="prompt output_prompt">Out[28]:</div>
-
-
-
-<div class="output_text output_subarea output_execute_result">
-<pre>24</pre>
-</div>
-
-</div>
-
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[29]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="mi">3</span> <span class="o">/</span> <span class="mi">2</span>
-</pre></div>
-
-</div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-<div class="prompt output_prompt">Out[29]:</div>
-
-
-
-<div class="output_text output_subarea output_execute_result">
-<pre>1.5</pre>
-</div>
-
-</div>
-
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[30]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="mi">3</span> <span class="o">//</span> <span class="mi">2</span> 
-</pre></div>
-
-</div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-<div class="prompt output_prompt">Out[30]:</div>
-
-
-
-<div class="output_text output_subarea output_execute_result">
-<pre>1</pre>
-</div>
-
-</div>
-
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[31]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="mi">7</span> <span class="o">%</span> <span class="mi">5</span>
-</pre></div>
-
-</div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-<div class="prompt output_prompt">Out[31]:</div>
-
-
-
-<div class="output_text output_subarea output_execute_result">
-<pre>2</pre>
-</div>
-
-</div>
-
-</div>
-</div>
-
-</div></section><section>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Exercise"><div class="alert alert-block alert-danger">Exercise</div><a class="anchor-link" href="#Exercise">&#182;</a></h1>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Q.-&#29694;&#22312;&#21488;&#21271;&#28331;&#24230;&#26159;-19$&#8451;$&#65292;&#35531;&#23559;$&#8451;$-&#36681;&#25104;-$&#8457;$">Q. &#29694;&#22312;&#21488;&#21271;&#28331;&#24230;&#26159; 19$&#8451;$&#65292;&#35531;&#23559;$&#8451;$ &#36681;&#25104; $&#8457;$<a class="anchor-link" href="#Q.-&#29694;&#22312;&#21488;&#21271;&#28331;&#24230;&#26159;-19$&#8451;$&#65292;&#35531;&#23559;$&#8451;$-&#36681;&#25104;-$&#8457;$">&#182;</a></h2><blockquote><p>公式： $Fahrenheit = Celsius × (9/5) + 32$</p>
-</blockquote>
-
-</div>
-</div>
-</div></section><section>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Answers"><div class="alert alert-block alert-success">Answers</div><a class="anchor-link" href="#Answers">&#182;</a></h1>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[32]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">Taipei_Celsius</span> <span class="o">=</span> <span class="mi">19</span>
-
-<span class="n">Taipei_Fahrenheit</span> <span class="o">=</span> <span class="n">Taipei_Celsius</span> <span class="o">*</span> <span class="p">(</span><span class="mi">9</span><span class="o">/</span><span class="mi">5</span><span class="p">)</span> <span class="o">+</span> <span class="mi">32</span>
-
-<span class="nb">print</span><span class="p">(</span><span class="n">Taipei_Fahrenheit</span><span class="p">)</span>
-</pre></div>
-
-</div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-<div class="prompt"></div>
-
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>66.2
-</pre>
-</div>
-</div>
-
-</div>
-</div>
-
-</div></section><section>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Operator">Operator<a class="anchor-link" href="#Operator">&#182;</a></h1><hr>
-<h2 id="Comparison-Operator">Comparison Operator<a class="anchor-link" href="#Comparison-Operator">&#182;</a></h2><table>
-<tr><td><b>運算子</b></td><td><b>說明</b></td></tr>
-<tr><td>$<$</td><td>小於</td></tr>
-<tr><td>$>$</td><td>大於</td></tr>
-<tr><td>$<=$</td><td>小於等於</td></tr>
-<tr><td>$>=$</td><td>大於等於</td></tr>
-<tr><td>$==$</td><td>等於</td></tr>
-<tr><td>$!=$</td><td>不等於</td></tr>
-</table>
-</div>
-</div>
-</div></section><section>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Operator">Operator<a class="anchor-link" href="#Operator">&#182;</a></h1><hr>
-<h2 id="Comparison-Operator">Comparison Operator<a class="anchor-link" href="#Comparison-Operator">&#182;</a></h2>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[33]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="mi">10</span>
-</pre></div>
-
-</div>
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[34]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">x</span> <span class="o">&lt;</span> <span class="mi">10</span>
-</pre></div>
-
-</div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-<div class="prompt output_prompt">Out[34]:</div>
-
-
-
-<div class="output_text output_subarea output_execute_result">
-<pre>False</pre>
-</div>
-
-</div>
-
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[35]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">x</span> <span class="o">&gt;</span> <span class="mi">10</span>
-</pre></div>
-
-</div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-<div class="prompt output_prompt">Out[35]:</div>
-
-
-
-<div class="output_text output_subarea output_execute_result">
-<pre>False</pre>
-</div>
-
-</div>
-
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[36]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">x</span> <span class="o">&lt;=</span> <span class="mi">10</span>
-</pre></div>
-
-</div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-<div class="prompt output_prompt">Out[36]:</div>
-
-
-
-<div class="output_text output_subarea output_execute_result">
-<pre>True</pre>
-</div>
-
-</div>
-
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[37]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">x</span> <span class="o">&gt;=</span> <span class="mi">10</span>
-</pre></div>
-
-</div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-<div class="prompt output_prompt">Out[37]:</div>
-
-
-
-<div class="output_text output_subarea output_execute_result">
-<pre>True</pre>
-</div>
-
-</div>
-
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[38]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">x</span> <span class="o">==</span> <span class="mi">10</span>
-</pre></div>
-
-</div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-<div class="prompt output_prompt">Out[38]:</div>
-
-
-
-<div class="output_text output_subarea output_execute_result">
-<pre>True</pre>
-</div>
-
-</div>
-
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[39]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">x</span> <span class="o">!=</span> <span class="mi">10</span>
-</pre></div>
-
-</div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-<div class="prompt output_prompt">Out[39]:</div>
-
-
-
-<div class="output_text output_subarea output_execute_result">
-<pre>False</pre>
-</div>
-
-</div>
-
-</div>
-</div>
-
-</div></section><section>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Operator">Operator<a class="anchor-link" href="#Operator">&#182;</a></h1><hr>
-<h2 id="Assignment-Operator">Assignment Operator<a class="anchor-link" href="#Assignment-Operator">&#182;</a></h2><table>
-<tr><td><b>運算子</b></td><td><b>說明</b></td></tr>
-<tr><td>$=$</td><td>將右邊的運算結果,指定給左邊的變數</td></tr>
-<tr><td>$+=$</td><td>將左邊變數值加右邊的值,再指定給左邊的變數</td></tr>
-<tr><td>$-=$</td><td>將左邊變數值減右邊的值,再指定給左邊的變數</td></tr>
-<tr><td>$*=$</td><td>將左邊變數值乘右邊的值,再指定給左邊的變數</td></tr>
-<tr><td>$/=$</td><td>將左邊變數值除右邊的值,再指定給左邊的變數</td></tr>
-<tr><td>% $=$</td><td>將左邊變數值除右邊的值,再指定餘數給左邊的變數</td></tr>
-</table>
-</div>
-</div>
-</div></section><section>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Operator">Operator<a class="anchor-link" href="#Operator">&#182;</a></h1><hr>
-<h2 id="Assignment-Operator">Assignment Operator<a class="anchor-link" href="#Assignment-Operator">&#182;</a></h2>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[40]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">y</span> <span class="o">=</span> <span class="mi">10</span>
-<span class="n">y</span> <span class="o">+=</span> <span class="mi">3</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">y</span><span class="p">)</span>
-</pre></div>
-
-</div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-<div class="prompt"></div>
-
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>13
-</pre>
-</div>
-</div>
-
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[41]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">y</span> <span class="o">=</span> <span class="mi">10</span>
-<span class="n">y</span> <span class="o">-=</span> <span class="mi">3</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">y</span><span class="p">)</span>
-</pre></div>
-
-</div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-<div class="prompt"></div>
-
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>7
-</pre>
-</div>
-</div>
-
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[42]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">y</span> <span class="o">=</span> <span class="mi">10</span>
-<span class="n">y</span> <span class="o">*=</span> <span class="mi">3</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">y</span><span class="p">)</span>
-</pre></div>
-
-</div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-<div class="prompt"></div>
-
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>30
-</pre>
-</div>
-</div>
-
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[43]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">y</span> <span class="o">=</span> <span class="mi">10</span>
-<span class="n">y</span> <span class="o">/=</span> <span class="mi">3</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">y</span><span class="p">)</span>
-</pre></div>
-
-</div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-<div class="prompt"></div>
-
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>3.3333333333333335
-</pre>
-</div>
-</div>
-
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[44]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">y</span> <span class="o">=</span> <span class="mi">10</span>
-<span class="n">y</span> <span class="o">%=</span> <span class="mi">3</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">y</span><span class="p">)</span>
-</pre></div>
-
-</div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-<div class="prompt"></div>
-
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>1
-</pre>
-</div>
-</div>
-
-</div>
-</div>
-
-</div></section><section>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Operator">Operator<a class="anchor-link" href="#Operator">&#182;</a></h1><hr>
-<h2 id="Logical-Operator">Logical Operator<a class="anchor-link" href="#Logical-Operator">&#182;</a></h2><table>
-<tr><td><b>運算子</b></td><td><b>功能</b></td></tr>
-<tr><td>&</td><td>且(And)</td></tr>
-<tr><td>$|$</td><td>或(Or)</td></tr>
-</table>
-</div>
-</div>
-</div></section><section>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Operator">Operator<a class="anchor-link" href="#Operator">&#182;</a></h1><hr>
-<h2 id="Logical-Operator">Logical Operator<a class="anchor-link" href="#Logical-Operator">&#182;</a></h2>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[45]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="p">(</span><span class="kc">True</span> <span class="o">&amp;</span> <span class="kc">True</span><span class="p">)</span>
-</pre></div>
-
-</div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-<div class="prompt output_prompt">Out[45]:</div>
-
-
-
-<div class="output_text output_subarea output_execute_result">
-<pre>True</pre>
-</div>
-
-</div>
-
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[46]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="p">(</span><span class="kc">True</span> <span class="o">&amp;</span> <span class="kc">False</span><span class="p">)</span>
-</pre></div>
-
-</div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-<div class="prompt output_prompt">Out[46]:</div>
-
-
-
-<div class="output_text output_subarea output_execute_result">
-<pre>False</pre>
-</div>
-
-</div>
-
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[47]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="p">(</span><span class="kc">False</span> <span class="o">&amp;</span> <span class="kc">True</span><span class="p">)</span>
-</pre></div>
-
-</div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-<div class="prompt output_prompt">Out[47]:</div>
-
-
-
-<div class="output_text output_subarea output_execute_result">
-<pre>False</pre>
-</div>
-
-</div>
-
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[48]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="p">(</span><span class="kc">False</span> <span class="o">&amp;</span> <span class="kc">False</span><span class="p">)</span>
-</pre></div>
-
-</div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-<div class="prompt output_prompt">Out[48]:</div>
-
-
-
-<div class="output_text output_subarea output_execute_result">
-<pre>False</pre>
-</div>
-
-</div>
-
-</div>
-</div>
-
-</div></section><section>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Operator">Operator<a class="anchor-link" href="#Operator">&#182;</a></h1><hr>
-<h2 id="Logical-Operator">Logical Operator<a class="anchor-link" href="#Logical-Operator">&#182;</a></h2>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[49]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="p">(</span><span class="kc">True</span> <span class="o">|</span> <span class="kc">True</span><span class="p">)</span>
-</pre></div>
-
-</div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-<div class="prompt output_prompt">Out[49]:</div>
-
-
-
-<div class="output_text output_subarea output_execute_result">
-<pre>True</pre>
-</div>
-
-</div>
-
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[50]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="p">(</span><span class="kc">True</span> <span class="o">|</span> <span class="kc">False</span><span class="p">)</span>
-</pre></div>
-
-</div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-<div class="prompt output_prompt">Out[50]:</div>
-
-
-
-<div class="output_text output_subarea output_execute_result">
-<pre>True</pre>
-</div>
-
-</div>
-
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[51]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="p">(</span><span class="kc">False</span> <span class="o">|</span> <span class="kc">True</span><span class="p">)</span>
-</pre></div>
-
-</div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-<div class="prompt output_prompt">Out[51]:</div>
-
-
-
-<div class="output_text output_subarea output_execute_result">
-<pre>True</pre>
-</div>
-
-</div>
-
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[52]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="p">(</span><span class="kc">False</span> <span class="o">|</span> <span class="kc">False</span><span class="p">)</span>
-</pre></div>
-
-</div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-<div class="prompt output_prompt">Out[52]:</div>
-
-
-
-<div class="output_text output_subarea output_execute_result">
-<pre>False</pre>
-</div>
-
-</div>
-
-</div>
-</div>
-
-</div></section></section><section><section>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Data-Type-II">Data Type II<a class="anchor-link" href="#Data-Type-II">&#182;</a></h1><hr>
-<ul>
-<li>容器型態（Container type)</li>
-</ul>
-
-</div>
-</div>
-</div></section><section>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Data-Type-II">Data Type II<a class="anchor-link" href="#Data-Type-II">&#182;</a></h1><hr>
-<table>
-<tr><td><b>Type</b></td><td><b>Example</b></td></tr>
-<tr><td>list</td><td>[1,2,'YA']</td></tr>
-<tr><td>tuple</td><td>(1,2,'YA')</td></tr>
-<tr><td>dictionary</td><td>{'Key1' : 'value1', 'Key2' : 'value2'}</td></tr>
-</table>
-</div>
-</div>
-</div></section><section>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Data-Type-II">Data Type II<a class="anchor-link" href="#Data-Type-II">&#182;</a></h1><hr>
-<h2 id="list">list<a class="anchor-link" href="#list">&#182;</a></h2><ul>
-<li>由 <font color='blue'>[ ]</font> 將<font color='green'>一串以 , 分開的值</font>包起來
-<br>e.g. my_list = <font color='blue'>[</font> <font color='green'>1 , 2 , ’YA’</font> <font color='blue'>]</font></li>
-<li>list 中的元素不必放相同的資料型態 (int, float, boolean, string)</li>
-<li>Python index 從<font color='red'>0</font>開始
-<br>e.g. my_list[<font color='red'>0</font>] = 1</li>
-</ul>
-
-</div>
-</div>
-</div></section><section>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Data-Type-II">Data Type II<a class="anchor-link" href="#Data-Type-II">&#182;</a></h1><hr>
-<h2 id="list">list<a class="anchor-link" href="#list">&#182;</a></h2>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[53]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">weather_list</span> <span class="o">=</span> <span class="p">[</span> <span class="s1">&#39;Taipei&#39;</span> <span class="p">,</span> <span class="mf">18.5</span> <span class="p">,</span> <span class="s1">&#39;rainy&#39;</span> <span class="p">]</span>
-</pre></div>
-
-</div>
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[54]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">type</span><span class="p">(</span><span class="n">weather_list</span><span class="p">)</span>
-</pre></div>
-
-</div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-<div class="prompt output_prompt">Out[54]:</div>
-
-
-
-<div class="output_text output_subarea output_execute_result">
-<pre>list</pre>
-</div>
-
-</div>
-
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[55]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">weather_list</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
-</pre></div>
-
-</div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-<div class="prompt output_prompt">Out[55]:</div>
-
-
-
-<div class="output_text output_subarea output_execute_result">
-<pre>&#39;Taipei&#39;</pre>
-</div>
-
-</div>
-
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[56]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">weather_list</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
-</pre></div>
-
-</div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-<div class="prompt output_prompt">Out[56]:</div>
-
-
-
-<div class="output_text output_subarea output_execute_result">
-<pre>18.5</pre>
-</div>
-
-</div>
-
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[57]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">weather_list</span><span class="p">[</span><span class="mi">0</span><span class="p">:</span><span class="mi">1</span><span class="p">]</span>
-</pre></div>
-
-</div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-<div class="prompt output_prompt">Out[57]:</div>
-
-
-
-<div class="output_text output_subarea output_execute_result">
-<pre>[&#39;Taipei&#39;]</pre>
-</div>
-
-</div>
-
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[58]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">weather_list</span><span class="p">[</span><span class="mi">0</span><span class="p">:</span><span class="mi">3</span><span class="p">]</span>
-</pre></div>
-
-</div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-<div class="prompt output_prompt">Out[58]:</div>
-
-
-
-<div class="output_text output_subarea output_execute_result">
-<pre>[&#39;Taipei&#39;, 18.5, &#39;rainy&#39;]</pre>
-</div>
-
-</div>
-
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[59]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">weather_list</span><span class="p">[:]</span>
-</pre></div>
-
-</div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-<div class="prompt output_prompt">Out[59]:</div>
-
-
-
-<div class="output_text output_subarea output_execute_result">
-<pre>[&#39;Taipei&#39;, 18.5, &#39;rainy&#39;]</pre>
-</div>
-
-</div>
-
-</div>
-</div>
-
-</div></section><section>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Data-Type-II">Data Type II<a class="anchor-link" href="#Data-Type-II">&#182;</a></h1><hr>
-<h2 id="list">list<a class="anchor-link" href="#list">&#182;</a></h2><ul>
-<li><h3>list.append( x )</h3>
-在 list 後面加入一個新的元素 x，直接放入該元素</li>
-<li><h3>list.extend( x )</h3>
-在 list 後面加入一個新的元素 x，先將元素展開再放入</li>
-</ul>
-<blockquote><p>元素 x : int , string , list , tuple</p>
-</blockquote>
-
-</div>
-</div>
-</div></section><section>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Data-Type-II">Data Type II<a class="anchor-link" href="#Data-Type-II">&#182;</a></h1><hr>
-<h2 id="list">list<a class="anchor-link" href="#list">&#182;</a></h2><h3 id="list.append(-x-)">list.append( x )<a class="anchor-link" href="#list.append(-x-)">&#182;</a></h3>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[60]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">weather_list</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s1">&#39;80%&#39;</span><span class="p">)</span> <span class="c1">#濕度</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">weather_list</span><span class="p">)</span>
-</pre></div>
-
-</div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-<div class="prompt"></div>
-
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>[&#39;Taipei&#39;, 18.5, &#39;rainy&#39;, &#39;80%&#39;]
-</pre>
-</div>
-</div>
-
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[61]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">weather_list</span><span class="o">.</span><span class="n">append</span><span class="p">([</span><span class="s1">&#39;Northeast&#39;</span><span class="p">,</span><span class="mi">4</span><span class="p">])</span> <span class="c1">#風相關[風向,風力級]</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">weather_list</span><span class="p">)</span>
-</pre></div>
-
-</div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-<div class="prompt"></div>
-
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>[&#39;Taipei&#39;, 18.5, &#39;rainy&#39;, &#39;80%&#39;, [&#39;Northeast&#39;, 4]]
-</pre>
-</div>
-</div>
-
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[62]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">type</span><span class="p">(</span><span class="n">weather_list</span><span class="p">[</span><span class="mi">4</span><span class="p">])</span>
-</pre></div>
-
-</div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-<div class="prompt output_prompt">Out[62]:</div>
-
-
-
-<div class="output_text output_subarea output_execute_result">
-<pre>list</pre>
-</div>
-
-</div>
-
-</div>
-</div>
-
-</div></section><section>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Data-Type-II">Data Type II<a class="anchor-link" href="#Data-Type-II">&#182;</a></h1><hr>
-<h2 id="list">list<a class="anchor-link" href="#list">&#182;</a></h2><h3 id="list.extend(-x-)">list.extend( x )<a class="anchor-link" href="#list.extend(-x-)">&#182;</a></h3>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[63]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">weather_list</span><span class="o">.</span><span class="n">extend</span><span class="p">([</span><span class="s1">&#39;Kaohsiung&#39;</span><span class="p">,</span><span class="mf">25.9</span><span class="p">,</span><span class="s1">&#39;sunny&#39;</span><span class="p">,</span><span class="s1">&#39;69%&#39;</span><span class="p">])</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">weather_list</span><span class="p">)</span>
-</pre></div>
-
-</div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-<div class="prompt"></div>
-
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>[&#39;Taipei&#39;, 18.5, &#39;rainy&#39;, &#39;80%&#39;, [&#39;Northeast&#39;, 4], &#39;Kaohsiung&#39;, 25.9, &#39;sunny&#39;, &#39;69%&#39;]
-</pre>
-</div>
-</div>
-
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[64]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">weather_list</span><span class="o">.</span><span class="n">append</span><span class="p">((</span><span class="s1">&#39;Northwest&#39;</span><span class="p">,</span><span class="mi">3</span><span class="p">))</span> <span class="c1">#風相關[風向,風力級]</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">weather_list</span><span class="p">)</span>
-</pre></div>
-
-</div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-<div class="prompt"></div>
-
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>[&#39;Taipei&#39;, 18.5, &#39;rainy&#39;, &#39;80%&#39;, [&#39;Northeast&#39;, 4], &#39;Kaohsiung&#39;, 25.9, &#39;sunny&#39;, &#39;69%&#39;, (&#39;Northwest&#39;, 3)]
-</pre>
-</div>
-</div>
-
-</div>
-</div>
-
-</div></section><section>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Data-Type-II">Data Type II<a class="anchor-link" href="#Data-Type-II">&#182;</a></h1><hr>
-<h2 id="list">list<a class="anchor-link" href="#list">&#182;</a></h2><ul>
-<li><h3>list.insert( 索引位置 ,  x )</h3>
-新增元素 x ，並放在指定的索引位置之前</li>
-</ul>
-<blockquote><p>元素 x : int , string , list , tuple</p>
-</blockquote>
-
-</div>
-</div>
-</div></section><section>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Data-Type-II">Data Type II<a class="anchor-link" href="#Data-Type-II">&#182;</a></h1><hr>
-<h2 id="list">list<a class="anchor-link" href="#list">&#182;</a></h2><h3 id="list.insert">list.insert<a class="anchor-link" href="#list.insert">&#182;</a></h3>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[65]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">weather_list</span><span class="p">)</span>
-</pre></div>
-
-</div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-<div class="prompt"></div>
-
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>[&#39;Taipei&#39;, 18.5, &#39;rainy&#39;, &#39;80%&#39;, [&#39;Northeast&#39;, 4], &#39;Kaohsiung&#39;, 25.9, &#39;sunny&#39;, &#39;69%&#39;, (&#39;Northwest&#39;, 3)]
-</pre>
-</div>
-</div>
-
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[66]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">weather_list</span><span class="o">.</span><span class="n">insert</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span><span class="s1">&#39;Taichung&#39;</span><span class="p">)</span> 
-<span class="n">weather_list</span><span class="o">.</span><span class="n">insert</span><span class="p">(</span><span class="mi">6</span><span class="p">,</span><span class="mf">21.5</span><span class="p">)</span> 
-<span class="n">weather_list</span><span class="o">.</span><span class="n">insert</span><span class="p">(</span><span class="mi">7</span><span class="p">,</span><span class="s1">&#39;cloudy&#39;</span><span class="p">)</span>
-<span class="n">weather_list</span><span class="o">.</span><span class="n">insert</span><span class="p">(</span><span class="mi">8</span><span class="p">,</span><span class="s1">&#39;73%&#39;</span><span class="p">)</span>
-<span class="n">weather_list</span><span class="o">.</span><span class="n">insert</span><span class="p">(</span><span class="mi">9</span><span class="p">,[</span><span class="s1">&#39;North&#39;</span><span class="p">])</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">weather_list</span><span class="p">)</span>
-</pre></div>
-
-</div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-<div class="prompt"></div>
-
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>[&#39;Taipei&#39;, 18.5, &#39;rainy&#39;, &#39;80%&#39;, [&#39;Northeast&#39;, 4], &#39;Taichung&#39;, 21.5, &#39;cloudy&#39;, &#39;73%&#39;, [&#39;North&#39;], &#39;Kaohsiung&#39;, 25.9, &#39;sunny&#39;, &#39;69%&#39;, (&#39;Northwest&#39;, 3)]
-</pre>
-</div>
-</div>
-
-</div>
-</div>
-
-</div></section><section>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Exercise"><div class="alert alert-block alert-danger">Exercise</div><a class="anchor-link" href="#Exercise">&#182;</a></h1>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Q.-&#35531;&#23559;-weather_list[9]-&#20013;&#30340;-list-[&#8216;North&#8217;]-&#24460;&#38754;&#21152;&#20837;&#19968;&#20491;&#39080;&#21147;-2-&#32026;-&#30340;&#36039;&#35338;">Q. &#35531;&#23559; weather_list[9] &#20013;&#30340; list [&#8216;North&#8217;] &#24460;&#38754;&#21152;&#20837;&#19968;&#20491;&#39080;&#21147; 2 &#32026; &#30340;&#36039;&#35338;<a class="anchor-link" href="#Q.-&#35531;&#23559;-weather_list[9]-&#20013;&#30340;-list-[&#8216;North&#8217;]-&#24460;&#38754;&#21152;&#20837;&#19968;&#20491;&#39080;&#21147;-2-&#32026;-&#30340;&#36039;&#35338;">&#182;</a></h2><blockquote><p>[ ‘North’ , 2 ]</p>
-</blockquote>
-
-</div>
-</div>
-</div></section><section>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Answers"><div class="alert alert-block alert-success">Answers</div><a class="anchor-link" href="#Answers">&#182;</a></h1>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[67]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">weather_list</span><span class="p">[</span><span class="mi">9</span><span class="p">]</span><span class="o">.</span><span class="n">insert</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">weather_list</span><span class="p">[</span><span class="mi">9</span><span class="p">]),</span><span class="mi">2</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">weather_list</span><span class="p">)</span>
-</pre></div>
-
-</div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-<div class="prompt"></div>
-
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>[&#39;Taipei&#39;, 18.5, &#39;rainy&#39;, &#39;80%&#39;, [&#39;Northeast&#39;, 4], &#39;Taichung&#39;, 21.5, &#39;cloudy&#39;, &#39;73%&#39;, [&#39;North&#39;, 2], &#39;Kaohsiung&#39;, 25.9, &#39;sunny&#39;, &#39;69%&#39;, (&#39;Northwest&#39;, 3)]
-</pre>
-</div>
-</div>
-
-</div>
-</div>
-
-</div></section><section>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Data-Type-II">Data Type II<a class="anchor-link" href="#Data-Type-II">&#182;</a></h1><hr>
-<h2 id="tuple">tuple<a class="anchor-link" href="#tuple">&#182;</a></h2><ul>
-<li>由 <font color='blue'>( )</font> 將<font color='green'>一串以 , 分開的值</font>包起來
-<br>e.g. my_tuple = <font color='blue'>(</font> <font color='green'>1 , 2 , ’YA’</font> <font color='blue'>)</font></li>
-<li>tuple 中的元素不必放相同的資料型態 (int, float, boolean, string)</li>
-<li>tuple 跟 list 很像</li>
-<li>tuple <font color='red'>不能新增、刪除、修改</font></li>
-</ul>
-
-</div>
-</div>
-</div></section><section>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Data-Type-II">Data Type II<a class="anchor-link" href="#Data-Type-II">&#182;</a></h1><hr>
-<h2 id="tuple">tuple<a class="anchor-link" href="#tuple">&#182;</a></h2>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[68]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">weather_tuple</span> <span class="o">=</span> <span class="p">(</span> <span class="s1">&#39;Taipei&#39;</span> <span class="p">,</span> <span class="mf">18.5</span> <span class="p">,</span> <span class="s1">&#39;rainy&#39;</span> <span class="p">)</span>
-</pre></div>
-
-</div>
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[69]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">type</span><span class="p">(</span><span class="n">weather_tuple</span><span class="p">)</span>
-</pre></div>
-
-</div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-<div class="prompt output_prompt">Out[69]:</div>
-
-
-
-<div class="output_text output_subarea output_execute_result">
-<pre>tuple</pre>
-</div>
-
-</div>
-
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[70]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">weather_tuple</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s1">&#39;80%&#39;</span><span class="p">)</span> <span class="c1">#濕度</span>
-</pre></div>
-
-</div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-<div class="prompt"></div>
-
-<div class="output_subarea output_text output_error">
-<pre>
-<span class="ansi-red-fg">---------------------------------------------------------------------------</span>
-<span class="ansi-red-fg">AttributeError</span>                            Traceback (most recent call last)
-<span class="ansi-green-fg">&lt;ipython-input-70-935cda1f4aac&gt;</span> in <span class="ansi-cyan-fg">&lt;module&gt;</span><span class="ansi-blue-fg">()</span>
-<span class="ansi-green-fg">----&gt; 1</span><span class="ansi-red-fg"> </span>weather_tuple<span class="ansi-blue-fg">.</span>append<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">&#39;80%&#39;</span><span class="ansi-blue-fg">)</span> <span class="ansi-red-fg">#濕度</span>
-
-<span class="ansi-red-fg">AttributeError</span>: &#39;tuple&#39; object has no attribute &#39;append&#39;</pre>
-</div>
-</div>
-
-</div>
-</div>
-
-</div></section><section>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Data-Type-II">Data Type II<a class="anchor-link" href="#Data-Type-II">&#182;</a></h1><hr>
-<h2 id="tuple">tuple<a class="anchor-link" href="#tuple">&#182;</a></h2><ul>
-<li><h3>tuple.count( x )</h3>
-元素 x 在 tuple 中出現幾次</li>
-<li><h3>tuple.index( x )</h3>
-元素 x 在 tuple 的索引位置是哪裡</li>
-</ul>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[71]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">city</span> <span class="o">=</span> <span class="p">(</span><span class="s1">&#39;Taipei&#39;</span><span class="p">,</span><span class="s1">&#39;Taichung&#39;</span><span class="p">,</span><span class="s1">&#39;Kaohsiung&#39;</span><span class="p">,</span><span class="s1">&#39;Taipei&#39;</span><span class="p">)</span>
-</pre></div>
-
-</div>
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[72]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">city</span><span class="o">.</span><span class="n">count</span><span class="p">(</span><span class="s1">&#39;Taipei&#39;</span><span class="p">)</span>
-</pre></div>
-
-</div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-<div class="prompt output_prompt">Out[72]:</div>
-
-
-
-<div class="output_text output_subarea output_execute_result">
-<pre>2</pre>
-</div>
-
-</div>
-
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[73]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">city</span><span class="o">.</span><span class="n">index</span><span class="p">(</span><span class="s1">&#39;Taichung&#39;</span><span class="p">)</span>
-</pre></div>
-
-</div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-<div class="prompt output_prompt">Out[73]:</div>
-
-
-
-<div class="output_text output_subarea output_execute_result">
-<pre>1</pre>
-</div>
-
-</div>
-
-</div>
-</div>
-
-</div></section><section>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Data-Type-II">Data Type II<a class="anchor-link" href="#Data-Type-II">&#182;</a></h1><hr>
-<h2 id="dictionary">dictionary<a class="anchor-link" href="#dictionary">&#182;</a></h2><ul>
-<li>由 <font color='blue'>{ }</font> 將<font color='green'>將一群由 Key,Value 配對組合而成的東西</font>包起來
-<br>e.g. my_dict = <font color='blue'>{</font> <font color='green'>'Key1':'value1','Key2':'value2'</font> <font color='blue'>}</font></li>
-<li>Key有大小寫之分</li>
-<li>不必放相同的資料型態</li>
-<li>Key不能重複，否則會被後面取代</li>
-<li>沒有順序之分</li>
-</ul>
-
-</div>
-</div>
-</div></section><section>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Data-Type-II">Data Type II<a class="anchor-link" href="#Data-Type-II">&#182;</a></h1><hr>
-<h2 id="dictionary">dictionary<a class="anchor-link" href="#dictionary">&#182;</a></h2>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[74]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">weather_dict</span> <span class="o">=</span> <span class="p">{</span> <span class="s1">&#39;Taipei&#39;</span><span class="p">:</span><span class="s1">&#39;rainy&#39;</span><span class="p">,</span> <span class="s1">&#39;Taichung&#39;</span><span class="p">:</span><span class="s1">&#39;cloudy&#39;</span> <span class="p">,</span> <span class="s1">&#39;Tainan&#39;</span><span class="p">:</span><span class="s1">&#39;sunny&#39;</span> <span class="p">,</span> <span class="s1">&#39;Kaohsiung&#39;</span><span class="p">:</span><span class="s1">&#39;sunny&#39;</span> <span class="p">}</span>
-</pre></div>
-
-</div>
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[75]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">type</span><span class="p">(</span><span class="n">weather_dict</span><span class="p">)</span>
-</pre></div>
-
-</div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-<div class="prompt output_prompt">Out[75]:</div>
-
-
-
-<div class="output_text output_subarea output_execute_result">
-<pre>dict</pre>
-</div>
-
-</div>
-
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[76]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">weather_dict</span> <span class="o">=</span> <span class="p">{</span> <span class="s1">&#39;Taipei&#39;</span><span class="p">:</span><span class="s1">&#39;rainy&#39;</span><span class="p">,</span> <span class="s1">&#39;Taichung&#39;</span><span class="p">:</span><span class="s1">&#39;cloudy&#39;</span> <span class="p">,</span> <span class="s1">&#39;Tainan&#39;</span><span class="p">:</span><span class="s1">&#39;sunny&#39;</span> <span class="p">,</span> <span class="s1">&#39;Kaohsiung&#39;</span><span class="p">:</span><span class="s1">&#39;sunny&#39;</span> <span class="p">,</span> <span class="s1">&#39;Kaohsiung&#39;</span><span class="p">:</span><span class="s1">&#39;rainy&#39;</span><span class="p">}</span>
-</pre></div>
-
-</div>
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<blockquote><p>總共有兩個'Kaohsiung'的Key，因為Key不能重複，所以會留下後面的</p>
-</blockquote>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[77]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">weather_dict</span><span class="p">)</span>
-</pre></div>
-
-</div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-<div class="prompt"></div>
-
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>{&#39;Taipei&#39;: &#39;rainy&#39;, &#39;Kaohsiung&#39;: &#39;rainy&#39;, &#39;Taichung&#39;: &#39;cloudy&#39;, &#39;Tainan&#39;: &#39;sunny&#39;}
-</pre>
-</div>
-</div>
-
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Data-Type-II">Data Type II<a class="anchor-link" href="#Data-Type-II">&#182;</a></h1><hr>
-<h2 id="dictionary">dictionary<a class="anchor-link" href="#dictionary">&#182;</a></h2>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[78]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">weather_dict</span> <span class="o">=</span> <span class="p">{</span> <span class="s1">&#39;Taipei&#39;</span><span class="p">:[</span><span class="mf">18.5</span><span class="p">,</span><span class="s1">&#39;rainy&#39;</span><span class="p">,</span><span class="s1">&#39;80%&#39;</span><span class="p">,</span> <span class="s1">&#39;Northeast&#39;</span><span class="p">,</span> <span class="mi">4</span><span class="p">],</span> <span class="s1">&#39;Taichung&#39;</span><span class="p">:</span> <span class="p">[</span><span class="mf">21.5</span><span class="p">,</span> <span class="s1">&#39;cloudy&#39;</span><span class="p">,</span> <span class="s1">&#39;73%&#39;</span><span class="p">,</span> <span class="s1">&#39;North&#39;</span><span class="p">,</span> <span class="mi">2</span><span class="p">]</span> <span class="p">}</span>
-</pre></div>
-
-</div>
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[79]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">weather_dict</span><span class="p">)</span>
-</pre></div>
-
-</div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-<div class="prompt"></div>
-
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>{&#39;Taipei&#39;: [18.5, &#39;rainy&#39;, &#39;80%&#39;, &#39;Northeast&#39;, 4], &#39;Taichung&#39;: [21.5, &#39;cloudy&#39;, &#39;73%&#39;, &#39;North&#39;, 2]}
-</pre>
-</div>
-</div>
-
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<blockquote><p>value 也可以是一個 list</p>
-</blockquote>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[80]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">weather_dict</span><span class="p">[</span><span class="s1">&#39;Taipei&#39;</span><span class="p">]</span>
-</pre></div>
-
-</div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-<div class="prompt output_prompt">Out[80]:</div>
-
-
-
-<div class="output_text output_subarea output_execute_result">
-<pre>[18.5, &#39;rainy&#39;, &#39;80%&#39;, &#39;Northeast&#39;, 4]</pre>
-</div>
-
-</div>
-
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<blockquote><p>取出 weather_dict 中台北的資訊</p>
-</blockquote>
-
-</div>
-</div>
-</div></section></section><section><section>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Data-Type-Conversion">Data Type Conversion<a class="anchor-link" href="#Data-Type-Conversion">&#182;</a></h1>
-</div>
-</div>
-</div></section><section>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Data-Type-Conversion">Data Type Conversion<a class="anchor-link" href="#Data-Type-Conversion">&#182;</a></h1><hr>
-<table>
-<tr><td><b>Type</b></td><td><b>說明</b></td></tr>
-<tr><td>int(x)</td><td> string , float ➜ int </td></tr>
-<tr><td>float(x)</td><td> string , int ➜ float </td></tr>
-<tr><td>str(x)</td><td> int , float , list , tuple , dict ➜ string</td></tr>
-<tr><td>list(x)</td><td> string , tuple, dict ➜ list </td></tr>
-<tr><td>tuple(x)</td><td> string , list ➜ tuple</td></tr>
-</table>
-</div>
-</div>
-</div></section><section>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Data-Type-Conversion">Data Type Conversion<a class="anchor-link" href="#Data-Type-Conversion">&#182;</a></h1><hr>
-<h2 id="int(x)">int(x)<a class="anchor-link" href="#int(x)">&#182;</a></h2>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[81]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">int</span><span class="p">(</span><span class="s1">&#39;10&#39;</span><span class="p">)</span>
-</pre></div>
-
-</div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-<div class="prompt output_prompt">Out[81]:</div>
-
-
-
-<div class="output_text output_subarea output_execute_result">
-<pre>10</pre>
-</div>
-
-</div>
-
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[82]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">int</span><span class="p">(</span><span class="mf">3.14</span><span class="p">)</span>
-</pre></div>
-
-</div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-<div class="prompt output_prompt">Out[82]:</div>
-
-
-
-<div class="output_text output_subarea output_execute_result">
-<pre>3</pre>
-</div>
-
-</div>
-
-</div>
-</div>
-
-</div></section><section>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="float(x)">float(x)<a class="anchor-link" href="#float(x)">&#182;</a></h2>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[83]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">float</span><span class="p">(</span><span class="s1">&#39;10&#39;</span><span class="p">)</span>
-</pre></div>
-
-</div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-<div class="prompt output_prompt">Out[83]:</div>
-
-
-
-<div class="output_text output_subarea output_execute_result">
-<pre>10.0</pre>
-</div>
-
-</div>
-
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[84]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">float</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span>
-</pre></div>
-
-</div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-<div class="prompt output_prompt">Out[84]:</div>
-
-
-
-<div class="output_text output_subarea output_execute_result">
-<pre>10.0</pre>
-</div>
-
-</div>
-
-</div>
-</div>
-
-</div></section><section>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Data-Type-Conversion">Data Type Conversion<a class="anchor-link" href="#Data-Type-Conversion">&#182;</a></h1><hr>
-<h2 id="str(x)">str(x)<a class="anchor-link" href="#str(x)">&#182;</a></h2>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[85]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">str</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span>
-</pre></div>
-
-</div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-<div class="prompt output_prompt">Out[85]:</div>
-
-
-
-<div class="output_text output_subarea output_execute_result">
-<pre>&#39;10&#39;</pre>
-</div>
-
-</div>
-
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[86]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">str</span><span class="p">(</span><span class="mf">3.14</span><span class="p">)</span>
-</pre></div>
-
-</div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-<div class="prompt output_prompt">Out[86]:</div>
-
-
-
-<div class="output_text output_subarea output_execute_result">
-<pre>&#39;3.14&#39;</pre>
-</div>
-
-</div>
-
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[87]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">str</span><span class="p">(</span><span class="n">weather_list</span><span class="p">)</span>
-</pre></div>
-
-</div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-<div class="prompt output_prompt">Out[87]:</div>
-
-
-
-<div class="output_text output_subarea output_execute_result">
-<pre>&#34;[&#39;Taipei&#39;, 18.5, &#39;rainy&#39;, &#39;80%&#39;, [&#39;Northeast&#39;, 4], &#39;Taichung&#39;, 21.5, &#39;cloudy&#39;, &#39;73%&#39;, [&#39;North&#39;, 2], &#39;Kaohsiung&#39;, 25.9, &#39;sunny&#39;, &#39;69%&#39;, (&#39;Northwest&#39;, 3)]&#34;</pre>
-</div>
-
-</div>
-
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[88]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">str</span><span class="p">(</span><span class="n">weather_tuple</span><span class="p">)</span>
-</pre></div>
-
-</div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-<div class="prompt output_prompt">Out[88]:</div>
-
-
-
-<div class="output_text output_subarea output_execute_result">
-<pre>&#34;(&#39;Taipei&#39;, 18.5, &#39;rainy&#39;)&#34;</pre>
-</div>
-
-</div>
-
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[89]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">str</span><span class="p">(</span><span class="n">weather_dict</span><span class="p">)</span>
-</pre></div>
-
-</div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-<div class="prompt output_prompt">Out[89]:</div>
-
-
-
-<div class="output_text output_subarea output_execute_result">
-<pre>&#34;{&#39;Taipei&#39;: [18.5, &#39;rainy&#39;, &#39;80%&#39;, &#39;Northeast&#39;, 4], &#39;Taichung&#39;: [21.5, &#39;cloudy&#39;, &#39;73%&#39;, &#39;North&#39;, 2]}&#34;</pre>
-</div>
-
-</div>
-
-</div>
-</div>
-
-</div></section><section>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Data-Type-Conversion">Data Type Conversion<a class="anchor-link" href="#Data-Type-Conversion">&#182;</a></h1><hr>
-<h2 id="list(x)">list(x)<a class="anchor-link" href="#list(x)">&#182;</a></h2>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[90]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">list</span><span class="p">(</span><span class="s1">&#39;10&#39;</span><span class="p">)</span>
-</pre></div>
-
-</div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-<div class="prompt output_prompt">Out[90]:</div>
-
-
-
-<div class="output_text output_subarea output_execute_result">
-<pre>[&#39;1&#39;, &#39;0&#39;]</pre>
-</div>
-
-</div>
-
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[91]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">list</span><span class="p">(</span><span class="n">weather_tuple</span><span class="p">)</span>
-</pre></div>
-
-</div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-<div class="prompt output_prompt">Out[91]:</div>
-
-
-
-<div class="output_text output_subarea output_execute_result">
-<pre>[&#39;Taipei&#39;, 18.5, &#39;rainy&#39;]</pre>
-</div>
-
-</div>
-
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[92]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">list</span><span class="p">(</span><span class="n">weather_dict</span><span class="p">)</span>
-</pre></div>
-
-</div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-<div class="prompt output_prompt">Out[92]:</div>
-
-
-
-<div class="output_text output_subarea output_execute_result">
-<pre>[&#39;Taipei&#39;, &#39;Taichung&#39;]</pre>
-</div>
-
-</div>
-
-</div>
-</div>
-
-</div></section><section>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Data-Type-Conversion">Data Type Conversion<a class="anchor-link" href="#Data-Type-Conversion">&#182;</a></h1><hr>
-<h2 id="tuple(x)">tuple(x)<a class="anchor-link" href="#tuple(x)">&#182;</a></h2>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[93]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">tuple</span><span class="p">(</span><span class="s1">&#39;10&#39;</span><span class="p">)</span>
-</pre></div>
-
-</div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-<div class="prompt output_prompt">Out[93]:</div>
-
-
-
-<div class="output_text output_subarea output_execute_result">
-<pre>(&#39;1&#39;, &#39;0&#39;)</pre>
-</div>
-
-</div>
-
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[94]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">tuple</span><span class="p">(</span><span class="n">weather_list</span><span class="p">)</span>
-</pre></div>
-
-</div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-<div class="prompt output_prompt">Out[94]:</div>
-
-
-
-<div class="output_text output_subarea output_execute_result">
-<pre>(&#39;Taipei&#39;,
- 18.5,
- &#39;rainy&#39;,
- &#39;80%&#39;,
- [&#39;Northeast&#39;, 4],
- &#39;Taichung&#39;,
- 21.5,
- &#39;cloudy&#39;,
- &#39;73%&#39;,
- [&#39;North&#39;, 2],
- &#39;Kaohsiung&#39;,
- 25.9,
- &#39;sunny&#39;,
- &#39;69%&#39;,
- (&#39;Northwest&#39;, 3))</pre>
-</div>
-
 </div>
 
 </div>
