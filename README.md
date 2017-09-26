@@ -35,7 +35,23 @@
             <li> <a href="https://github.com/kristenchan/Sharing/blob/master/PowerBIwithR.pdf" target="_blank"> Power BI with R - slide </a> 
             </li>
         </ul>
-   </li>        
+   </li>   
+   <li> 2016-05 [R-Ladies Taipei --Rattle]
+        <ul class="task-list">
+            <li> <a href="https://github.com/rladiestaipei/R-Main-Panel/blob/master/2016/201605_Rattle.pdf" target="_blank"> Rattle - slide </a> 
+            </li>
+        </ul>
+   </li>      
+   <li> 2016-01 [R-Ladies Taipei -- Model Comparison]
+        <ul class="task-list">
+            <li> Machine Learning for Hackers : Chapter 12 Model Comparison
+            </li>
+        </ul>
+   </li>   
+   <li> 2015-05 [R-Ladies Taipei -- 使用R的經驗談]
+   </li>    
+   
+   
 </ul>
 <br>
 <h3> Tutorial </h3>
