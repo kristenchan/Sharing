@@ -4,6 +4,12 @@
 <hr size="1">
 <h3> R </h3>
 <ul>
+   <li> 2018-01-11 [TKU -- Azure Intro]
+        <ul class="task-list">
+            <li> <a href="https://github.com/kristenchan/Sharing/blob/master/AzureVM_RStudio_Shiny_Server.pdf" target="_blank"> Azure VM (R Studio Server & Shiny Server) </a> 
+            </li>
+        </ul>
+   </li> 
    <li> 2017-07-10 [Taiwan R / MLDM Monday -- Shiny on Azure partII]
         <ul class="task-list">
             <li> <a href="https://github.com/kristenchan/Sharing/blob/master/ShinyOnAzure_part2.pdf" target="_blank"> Shiny on Azure - slide </a> 
