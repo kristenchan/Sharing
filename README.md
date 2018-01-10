@@ -9,8 +9,8 @@
             <li> <a href="https://github.com/kristenchan/Sharing/blob/master/AzureVM_RStudio_Shiny_Server.pdf" target="_blank"> Azure VM (R Studio Server & Shiny Server) </a> 
             </li>
         </ul>
-   </li> 
-   <li> 2017-07-10 [Taiwan R / MLDM Monday -- Shiny on Azure partII]
+   </li>
+ <li> 2017-07-10 [Taiwan R / MLDM Monday -- Shiny on Azure partII]
         <ul class="task-list">
             <li> <a href="https://github.com/kristenchan/Sharing/blob/master/ShinyOnAzure_part2.pdf" target="_blank"> Shiny on Azure - slide </a> 
             </li>
