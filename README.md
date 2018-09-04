@@ -4,7 +4,18 @@
 <hr size="1">
 <h3> R </h3>
 <ul>
-   <li> 2018-01-11 [TKU -- Azure Intro]
+ <li> 2018-09-03 [Taiwan R / MLDM Monday -- MLDM x Data Viz with R | R Shiny]
+        <ul class="task-list">
+            <li> <a href="https://drive.google.com/open?id=1axlSdTu8XubLlqeV_er_CSxJAgNt_OCY" target="_blank"> Shiny Application - slide </a> 
+                 <ul>
+                    <li>Azure ML via Shiny</li>
+                    <li>Get Kaggle Leaderboard with Shiny</li>
+                    <li>Taipei Open Data with Shiny</li>
+                 </ul>
+            </li>
+        </ul>
+  </li>
+  <li> 2018-01-11 [TKU -- Azure Intro]
         <ul class="task-list">
             <li> <a href="https://github.com/kristenchan/Sharing/blob/master/AzureVM_RStudio_Shiny_Server.pdf" target="_blank"> Azure VM (R Studio Server & Shiny Server) </a> 
             </li>
