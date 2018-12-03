@@ -4,6 +4,17 @@
 <hr size="1">
 <h3> R </h3>
 <ul>
+<li> 2018-12-01 [TSDC -- R Shiny]
+        <ul class="task-list">
+            <li> <a href="https://goo.gl/Ea1eEg" target="_blank"> Shiny Application - slide </a> 
+                 <ul>
+                    <li>Taipei Open Data with Shiny</li>
+                    <li>Azure ML via Shiny</li>
+                    <li>Case Sharing -- Get recommended list</li>
+                 </ul>
+            </li>
+        </ul>
+  </li>
  <li> 2018-09-03 [Taiwan R / MLDM Monday -- MLDM x Data Viz with R | R Shiny]
         <ul class="task-list">
             <li> <a href="https://drive.google.com/open?id=1axlSdTu8XubLlqeV_er_CSxJAgNt_OCY" target="_blank"> Shiny Application - slide </a> 
