@@ -4,6 +4,20 @@
 <hr size="1">
 <h3> R </h3>
 <ul>
+<li> 2018-12-09 [Shanghai -- R Shiny]
+        <ul class="task-list">
+            <li> <a href="https://github.com/kristenchan/Sharing/blob/master/ShinyApplication_Sharing_Shanghai.pdf" target="_blank"> Shiny Application - slide </a> 
+                 <ul>
+                    <li>Case Sharing</li>
+                         <ul>
+                                 <li>Deploy Recommended system via Shiny</li>
+                                 <li>Azure ML via Shiny</li>
+                                 <li>R-Ladies Taipei Kaggle Leaderbord via Shiny</li>
+                         </ul>
+                 </ul>
+            </li>
+        </ul>
+ </li>
 <li> 2018-12-01 [TSDC -- R Shiny]
         <ul class="task-list">
             <li> <a href="https://goo.gl/Ea1eEg" target="_blank"> Shiny Application - slide </a> 
@@ -14,7 +28,7 @@
                  </ul>
             </li>
         </ul>
-  </li>
+ </li>
  <li> 2018-09-03 [Taiwan R / MLDM Monday -- MLDM x Data Viz with R | R Shiny]
         <ul class="task-list">
             <li> <a href="https://drive.google.com/open?id=1axlSdTu8XubLlqeV_er_CSxJAgNt_OCY" target="_blank"> Shiny Application - slide </a> 
