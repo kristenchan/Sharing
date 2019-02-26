@@ -92,6 +92,7 @@ def azureml_main(dataframe1):
     #--------------------
     
     #----- Ticket -----
+    input_data['Ticket'] = input_data['Ticket'].astype(str)
     # Clean Function    
     def cleanTicket(ticket):
         ticket = ticket.replace('.', '')
@@ -117,5 +118,21 @@ def azureml_main(dataframe1):
     input_data['Small_family'] = input_data['Family_size'].map(lambda s: 1 if 2 <= s <= 4 else 0)
     input_data['Big_family'] = input_data['Family_size'].map(lambda s: 1 if 5 <= s else 0)
     #--------------------
+    
+    #----- Fill Dummy Column -----    
+    all_columns = ['Title_Master','Title_Miss','Title_Mr','Title_Mrs','Title_Officer','Title_Royalty',
+                   'Embarked_C','Embarked_Q','Embarked_S',
+                   'Cabin_A','Cabin_B','Cabin_C','Cabin_D','Cabin_E','Cabin_F','Cabin_G','Cabin_M','Cabin_T',
+                   'Pclass_1','Pclass_2','Pclass_3',
+                   'Ticket_A4','Ticket_A5','Ticket_AS','Ticket_C','Ticket_CA','Ticket_CASOTON','Ticket_FC',
+                   'Ticket_FCC','Ticket_Fa','Ticket_LINE','Ticket_Null','Ticket_PC','Ticket_PP','Ticket_PPP','Ticket_SC',
+                   'Ticket_SCA4','Ticket_SCAH','Ticket_SCOW','Ticket_SCPARIS','Ticket_SCParis','Ticket_SOC',
+                   'Ticket_SOP','Ticket_SOPP','Ticket_SOTONO2','Ticket_SOTONOQ','Ticket_SP','Ticket_STONO',
+                   'Ticket_STONO2','Ticket_SWPP','Ticket_WC','Ticket_WEP']
+ 
+    for column_i in all_columns:
+        if column_i not in input_data:
+            input_data[column_i] = 0
+    #--------------------   
     
     return input_data,
