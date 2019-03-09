@@ -4,9 +4,9 @@
 <hr size="1">
 <h3> Azure </h3>
 <ul>
-   <li> 2019-03-09 [Cognitive Services]
+   <li> 2019-03-09 [Microsoft Coding Angels -- Cognitive Services]
         <ul class="task-list">
-            <li> <a href="https://docs.google.com/presentation/d/1pbYgOhGz1e4EzOeFINl3NZF1-fzMy--QB4G_O8jmjK4/edit?usp=sharing" target="_blank"> Text Analysis in Power BI - slide </a> </li>
+            <li> <a href="https://drive.google.com/file/d/14IB0JTVza9RBWp4AmqiEmDKPHUaE369e/view?usp=sharing" target="_blank"> Text Analysis in Power BI - slide </a> </li>
         </ul>
    </li>
 </ul>
