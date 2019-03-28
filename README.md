@@ -13,6 +13,20 @@
 <br>
 <h3> R </h3>
 <ul>
+<li> 2018-12-15 [Global AI Bootcamp - Taipei -- R Shiny]
+        <ul class="task-list">
+            <li> <a href="https://github.com/kristenchan/Sharing/blob/master/Keras_Shiny_MNIST.pdf" target="_blank"> R Keras - MNIST  </a> 
+                 <ul>
+                    <li>Sharing</li>
+                         <ul>
+                                 <li>Keras</li>
+                                 <li>Azure</li>
+                                 <li>AWS</li>
+                         </ul>
+                 </ul>
+            </li>
+        </ul>
+</li>
 <li> 2018-12-09 [Shanghai -- R Shiny]
         <ul class="task-list">
             <li> <a href="https://github.com/kristenchan/Sharing/blob/master/ShinyApplication_Sharing_Shanghai.pdf" target="_blank"> Shiny Application - slide </a> 
@@ -26,7 +40,7 @@
                  </ul>
             </li>
         </ul>
- </li>
+</li>
 <li> 2018-12-01 [TSDC -- R Shiny]
         <ul class="task-list">
             <li> <a href="https://github.com/kristenchan/Sharing/blob/master/ShinyApplication_TSDC.pdf" target="_blank"> Shiny Application - slide </a> 
@@ -40,7 +54,7 @@
  </li>
  <li> 2018-09-03 [Taiwan R / MLDM Monday -- MLDM x Data Viz with R | R Shiny]
         <ul class="task-list">
-            <li> <a href="https://drive.google.com/open?id=1axlSdTu8XubLlqeV_er_CSxJAgNt_OCY" target="_blank"> Shiny Application - slide </a> 
+            <li> <a href="https://github.com/kristenchan/Sharing/blob/master/ShinyApplication_Sharing_MLDM.pdf" target="_blank"> Shiny Application - slide </a> 
                  <ul>
                     <li>Azure ML via Shiny</li>
                     <li>Get Kaggle Leaderboard with Shiny</li>
