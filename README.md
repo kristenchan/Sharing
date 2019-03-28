@@ -6,7 +6,7 @@
 <ul>
    <li> 2019-03-09 [Microsoft Coding Angels -- Cognitive Services]
         <ul class="task-list">
-            <li> <a href="https://drive.google.com/file/d/14IB0JTVza9RBWp4AmqiEmDKPHUaE369e/view?usp=sharing" target="_blank"> Text Analysis in Power BI - slide </a> </li>
+            <li> <a href="https://github.com/kristenchan/Sharing/blob/master/CognitiveServices_PowerBI.pdf" target="_blank"> Text Analysis in Power BI - slide </a> </li>
         </ul>
    </li>
 </ul>
@@ -29,7 +29,7 @@
  </li>
 <li> 2018-12-01 [TSDC -- R Shiny]
         <ul class="task-list">
-            <li> <a href="https://goo.gl/Ea1eEg" target="_blank"> Shiny Application - slide </a> 
+            <li> <a href="https://github.com/kristenchan/Sharing/blob/master/ShinyApplication_TSDC.pdf" target="_blank"> Shiny Application - slide </a> 
                  <ul>
                     <li>Taipei Open Data with Shiny</li>
                     <li>Azure ML via Shiny</li>
