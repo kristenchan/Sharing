@@ -10,6 +10,7 @@
            <ul>
               <li>Azure Machine Learning</li>
               <li>Python</li>
+           </ul>
         </ul>
    </li>
    <li> 2019-03-10 [Microsoft Coding Angels -- Cognitive Services]
