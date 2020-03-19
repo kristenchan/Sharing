@@ -4,6 +4,14 @@
 <hr size="1">
 <h3> Azure </h3>
 <ul>
+   <li> 2019-05-18 [NTUB -- Kaggle Titanic]
+        <ul class="task-list">
+            <li> <a href="https://github.com/kristenchan/Sharing/blob/master/Kaggle_Titanic/Kaggle_Titanic_NTUB.pdf" target="_blank"> Kaggle Titanic </a> </li>
+           <ul>
+              <li>Azure Machine Learning</li>
+              <li>Python</li>
+        </ul>
+   </li>
    <li> 2019-03-10 [Microsoft Coding Angels -- Cognitive Services]
         <ul class="task-list">
             <li> <a href="https://github.com/kristenchan/Sharing/blob/master/CognitiveServices_PowerBI.pdf" target="_blank"> Text Analysis in Power BI - slide </a> </li>
