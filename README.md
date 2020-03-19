@@ -27,9 +27,10 @@
    <li> 2019-02-16 [StarRocket -- Kaggle Titanic]
         <ul class="task-list">
             <li> <a href="https://github.com/kristenchan/Sharing/tree/master/Kaggle_Titanic" target="_blank"> Kaggle Titanic </a> </li>
-           <ul>
+            <ul>
               <li>Azure Machine Learning</li>
               <li>Python</li>
+            </ul>
         </ul>
    </li>
 </ul>
