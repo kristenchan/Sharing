@@ -10,6 +10,11 @@
             <li> <a href="https://github.com/kristenchan/Sharing/blob/master/Global_AI_Night.pdf" target="_blank"> Azure Machine Learning Visual Interface </a> </li>
         </ul>
    </li>
+   <li> 2019-06-22 [Insider Dev Tour 2019]
+        <ul class="task-list">
+            <li> <a href="https://github.com/kristenchan/Sharing/blob/master/IDT-2019-Leverage-the-Power-of-Machine-Learning-on-Windows-Kristen.pdf" target="_blank"> Leverage the Power of Machine Learning on Windows </a> </li>
+        </ul>
+   </li>
    <li> 2019-05-18 [NTUB -- Kaggle Titanic]
         <ul class="task-list">
             <li> <a href="https://github.com/kristenchan/Sharing/blob/master/Kaggle_Titanic/Kaggle_Titanic_NTUB.pdf" target="_blank"> Kaggle Titanic </a> </li>
