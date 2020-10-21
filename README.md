@@ -43,6 +43,12 @@
 <br>
 <h3> R </h3>
 <ul>
+    <li> 2020-10-17 [satRday Taiwan 2020]
+            <ul class="task-list">
+                <li> <a href="https://github.com/kristenchan/Sharing/blob/master/satRday_R_plumber_onAzure/satRday_R_plumber_onAzure.pdf" target="_blank"> 串連 Open Data : 以石化產業為例  </a> 
+                </li>
+            </ul>
+    </li>  
     <li> 2018-12-15 [Global AI Bootcamp - Taipei -- R Shiny]
             <ul class="task-list">
                 <li> <a href="https://github.com/kristenchan/Sharing/blob/master/Keras_Shiny_MNIST.pdf" target="_blank"> R Keras - MNIST  </a> 
